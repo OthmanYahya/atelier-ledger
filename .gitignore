@@ -1,0 +1,9 @@
+node_modules
+dist
+*.tsbuildinfo
+.DS_Store
+*.local
+.impeccable/questions/
+.impeccable/mocks/
+.impeccable/review/
+.impeccable/config.local.json

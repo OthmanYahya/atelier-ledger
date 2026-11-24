@@ -1,0 +1,257 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("./assets/fonts/newsreader-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("./assets/fonts/newsreader-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("./assets/fonts/newsreader-italic-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("./assets/fonts/newsreader-italic-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("./assets/fonts/instrument-sans-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("./assets/fonts/instrument-sans-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("./assets/fonts/jetbrains-mono-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("./assets/fonts/jetbrains-mono-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root,
+html[data-theme="paper"] {
+  color-scheme: light;
+  --bg-canvas: #F6F4EF;
+  --bg-surface: #FFFFFF;
+  --bg-rail: #EFECE4;
+  --bg-subtle: #EAE5DA;
+  --border: #E5E0D5;
+  --border-strong: #CFC7B8;
+  --ink-primary: #171614;
+  --ink-secondary: #57534E;
+  --ink-muted: #6C655D;
+  --accent: #1B4D3E;
+  --accent-hover: #143B2F;
+  --accent-ink: #FFFFFF;
+  --accent-tint: #E7F0EC;
+  --terracotta: #C2592B;
+  --terracotta-tint: #FAEDE7;
+  --sage: #256347;
+  --sage-tint: #E9F3ED;
+  --ochre: #925B14;
+  --ochre-tint: #FAF2E1;
+  --crimson: #9E3434;
+  --crimson-tint: #FAEBEB;
+  --shadow-overlay: 0 18px 40px -12px rgba(23, 22, 20, 0.16), 0 4px 12px -4px rgba(23, 22, 20, 0.08);
+}
+
+html[data-theme="ink"] {
+  color-scheme: dark;
+  --bg-canvas: #151412;
+  --bg-surface: #1E1C19;
+  --bg-rail: #191714;
+  --bg-subtle: #282520;
+  --border: #2F2B25;
+  --border-strong: #464037;
+  --ink-primary: #F2EEE6;
+  --ink-secondary: #C4BDB2;
+  --ink-muted: #9D9589;
+  --accent: #3A8B71;
+  --accent-hover: #49A084;
+  --accent-ink: #0F1412;
+  --accent-tint: rgba(58, 139, 113, 0.18);
+  --terracotta: #E0784B;
+  --terracotta-tint: rgba(224, 120, 75, 0.16);
+  --sage: #58B084;
+  --sage-tint: rgba(88, 176, 132, 0.16);
+  --ochre: #DCA048;
+  --ochre-tint: rgba(220, 160, 72, 0.16);
+  --crimson: #E07272;
+  --crimson-tint: rgba(224, 114, 114, 0.16);
+  --shadow-overlay: 0 22px 48px -12px rgba(0, 0, 0, 0.65), 0 6px 16px -4px rgba(0, 0, 0, 0.4);
+}
+
+@layer base {
+  html,
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--ink-primary);
+    font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    caret-color: var(--accent);
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--accent-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  a {
+    text-underline-offset: 3px;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-strong) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--border-strong);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+}
+
+.font-display {
+  font-family: "Newsreader", Georgia, Cambria, serif;
+}
+
+.font-mono-ledger {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.ledger-sheet {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.ledger-control {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  color: var(--ink-primary);
+  border-radius: 7px;
+  transition: border-color 150ms cubic-bezier(0.22, 1, 0.36, 1), background-color 150ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ledger-control:focus {
+  border-color: var(--accent);
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--accent-ink);
+  border: 1px solid transparent;
+  border-radius: 7px;
+  font-weight: 600;
+  transition: background-color 150ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background-color: var(--bg-surface);
+  color: var(--ink-primary);
+  border: 1px solid var(--border-strong);
+  border-radius: 7px;
+  font-weight: 500;
+  transition: background-color 150ms cubic-bezier(0.22, 1, 0.36, 1), border-color 150ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--bg-subtle);
+}
+
+@media print {
+  @page {
+    margin: 14mm;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only-sheet {
+    position: static !important;
+    width: 100% !important;
+    max-width: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+}
